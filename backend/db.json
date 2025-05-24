@@ -1,8 +1,15 @@
 {
   "opinions": [
     {
+      "id": 1748039138977,
+      "votes": 2,
+      "userName": "Mark",
+      "title": "Meta Glasses",
+      "body": "New Meta glasses might be not as good as Google :("
+    },
+    {
       "id": 1748037171615,
-      "votes": 0,
+      "votes": 4,
       "userName": "Devansh",
       "title": "Bibi the best",
       "body": "Silvia is best chummi bibi :)"
