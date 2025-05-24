@@ -1,17 +1,22 @@
-import { use } from 'react';
+import { use } from "react";
 
-import { Opinion } from './Opinion';
-import { OpinionsContext } from '../store/opinions-context';
+import { Opinion } from "./Opinion";
+import { OpinionsContext } from "../store/opinions-context";
 
 export function Opinions() {
   const { opinions } = use(OpinionsContext);
-  
+  console.log(opinions);
+
+  const sortedOpinions = opinions
+    ? Object.values(opinions).sort((a, b) => b.votes - a.votes)
+    : [];
+
   return (
     <div id="opinions">
       <h2>User Opinions</h2>
-      {opinions && (
+      {sortedOpinions && (
         <ul>
-          {opinions.map((o) => (
+          {sortedOpinions.map((o) => (
             <li key={o.id}>
               <Opinion opinion={o} />
             </li>
